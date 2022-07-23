@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+
+
+    <style>
+        body {
+            background-color: #EDEDEF;
+            text-transform: capitalize;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+
+            width: 50%;
+            margin: 20px auto;
+            height: 500px;
+            box-shadow: 1px 0px 7px 7px #9B9FA0;
+        }
+
+        .div2 {
+            background-color: #46C5CE;
+            width: 50%;
+            border: 1px solid #46C5CE;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            color: white;
+            text-align: center;
+            padding-top: 120px;
+
+        }
+
+
+
+        .div1 {
+            border: 1px solid white;
+            width: 50%;
+            border-bottom-left-radius: 5px;
+            border-top-left-radius: 10px;
+            background-color: white;
+            padding-top: 90px;
+            text-align: center;
+
+        }
+
+        input {
+            border: 0px;
+            background-color: #F8F8FA;
+            height: 25px;
+        }
+
+        button {
+            border-radius: 50px;
+            font-size: large;
+            font-weight: bold;
+            padding: 10px 30px;
+            background-color: #46C5CE;
+            border: 1px solid #46C5CE;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #42b3bb;
+        }
+
+        .fa-facebook {
+            font-size: 30px;
+
+            color: #42b3bb;
+            margin-bottom: 20px;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .fa-google-plus {
+            font-size: 30px;
+            padding: 5px;
+            color: #42b3bb;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        .fa-linkedin {
+            font-size: 30px;
+            padding: 5px;
+            color: #42b3bb;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main {
+           
+            justify-content: flex-start;
+            box-shadow: 1px 0px 7px 7px #9B9FA0;
+            width: 100%;
+            margin: 0;
+            height: 100vh;
+            margin: 10px 0;
+        }
+        .div1,.div2{
+            padding: 20px;
+        }
+
+
+}
+@media only screen and (max-width: 768px) {
+            .main {
+            margin:auto;
+            box-shadow: 1px 0px 4px 4px #9B9FA0;
+            
+        }
+      
+
+
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="div1">
+            <h1>sign in</h1>
+            <i class="fa-brands  fa-facebook"></i>
+            <i class="fa-brands fa-google-plus"></i>
+            <i class="fa-brands  fa-linkedin"></i>
+
+            <form action="" onsubmit="check()">
+
+                <input type="text" id="email" placeholder="user email" required> <br><br>
+
+                <input type="password" id="password" placeholder="password" required> <br><br>
+
+                <label for="forget">forgot your pasword?</label> <br><br>
+
+                <button>sign in</button>
+            </form>
+        </div>
+
+        <div class="div2">
+            <form action="">
+                <h1 style="text-align:center;">sign up</h1>
+                <p>sign up here if you dont have account</p> <br><br>
+                <button  style="border:1px solid white ;"><a href="signup2.html">sign up</a></button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+
+        function check(){
+          let input1 = document.querySelector("#email").value;
+          let input2 = document.querySelector("#password").value;
+
+          
+
+          let email = "admin@gmail.com";
+          let password = "admin";
+
+          if(input1 === email){
+            if(input2 === password){
+                alert("you have successfully login");
+            }else{
+                alert("incorrect password")
+            }
+          }else{
+            alert("this email doesnot exist");
+          }
+        }
+
+        
+    
+    </script>
+</body>
+
+</html>
